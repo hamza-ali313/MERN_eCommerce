@@ -1,17 +1,45 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { FaUser } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import { CiMenuFries } from "react-icons/ci";
-// import landinglogo from '../../assets/Images/landing-logo.png'
-import { Container, Row, Col, Dropdown } from "react-bootstrap";
-import "./home.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import ProductList from "../../components/ProductList";
+import { Row, Container, Col } from "react-bootstrap";
 
-function Home() {
+const HomePage = () => {
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    getProduct();
+  }, []);
+
+  const getProduct = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/api/products/read"
+      );
+      setProductList(response.data);
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
-    <div>
-      <h1>Hello Hamza</h1>
-    </div>
+    <>
+      <Container>
+        <Row>
+          {productList.map((item) => (
+            <Col key={item._id}>
+              <ProductList
+                title={item.title}
+                description={item.description}
+                price={item.price}
+                images={item.images}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
   );
-}
+};
 
-export default Home;
+export default HomePage;

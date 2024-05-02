@@ -221,6 +221,32 @@ a.btn4 {
     transform: scale(1.02);
 }
 
+/* product item css start */
+.prod-item p {
+    color: #000;
+}
+
+/* product item css end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* only container responsive  */
 @media (min-width: 576px) {
 
