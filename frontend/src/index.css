@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: "Michelia";
+    src: url(./assets/fonts/Michelia.otf);
+}
+
+
+@font-face {
+    font-family: "DunbarLow-Light";
+    src: url(./assets/fonts/DunbarLow-Light.ttf);
+}
+
+
+@font-face {
+    font-family: "LeMondeLivre-SemiBold";
+    src: url(./assets/fonts/LeMondeLivre-SemiBold.otf);
+}
+
+@font-face {
+    font-family: "Copperplate-Gothic-Light";
+    src: url(./assets/fonts/Copperplate-Gothic-Light-Regular.ttf);
+}
+
+
+ul li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #2B383E !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+h1 {
+    font-size: 55px !important;
+    color: #E2A239 !important;
+    font-family: "Michelia";
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    font-weight: 500 !important;
+}
+
+h2 {
+    font-size: 30px !important;
+    color: #e2a239 !important;
+    font-family: "Copperplate-Gothic";
+    text-transform: capitalize;
+    letter-spacing: -1px;
+}
+
+h2 span {
+    font-size: 19px !important;
+    color: #e2a239 !important;
+    font-family: 'Copperplate-Gothic';
+    text-transform: capitalize;
+}
+
+h6 {
+    font-size: 15px !important;
+    color: #E2A239 !important;
+    font-family: 'Copperplate-Gothic-Light';
+    text-transform: uppercase;
+    font-weight: 500 !important;
+    letter-spacing: 0px;
+}
+
+h4 {
+    text-transform: capitalize;
+    font-family: "LeMondeLivre-SemiBold";
+    font-size: 40px !important;
+}
+
+
+
+a.btn8 {
+    color: orange;
+    border: 3px solid orange;
+    padding: 5px 17px;
+    border-radius: 6px;
+    font-family: "Copperplate-Gothic";
+    text-transform: capitalize;
+    font-size: 19px;
+    font-weight: 500;
+    transition: .5s;
+    display: inline-block;
+}
+
+.btn8:hover {
+    transform: scale(1.02);
+    font-weight: 500;
+}
+
+.btn1 {
+    text-transform: capitalize;
+    color: #e2a239;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Copperplate-Gothic";
+    position: relative;
+    background: #2b383e;
+    border: 2px solid;
+    padding: 0px 33px;
+    text-decoration: none;
+}
+
+.btn1:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background: #2b383e;
+    width: 116px;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.btn1:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background: #2b383e;
+    width: 116px;
+    height: 4px;
+    transition: 0.5s;
+}
+
+.btn1:hover:before {
+    width: 0;
+}
+
+.btn1:hover:after {
+    width: 0;
+}
+
+a.btn2 {
+    text-transform: capitalize;
+    color: #e2a239;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Copperplate-Gothic";
+    position: relative;
+    background: #2b383e;
+    border: 2px solid;
+    padding: 10px 50px;
+    transition: .5s;
+}
+
+.btn2:hover {
+    transform: scale(1.02);
+}
+
+a.btn3 {
+    text-transform: capitalize;
+    background-image: url(../images/btn-bg.png);
+    background-size: cover;
+    padding: 10px 10px;
+    background-repeat: no-repeat;
+    width: 194px;
+    height: 43px;
+    display: inline-block;
+    text-align: center;
+    color: #e2a239;
+    font-family: 'Roboto';
+    transition: .5s;
+}
+
+.btn3:hover {
+    transform: scale(1.02);
+}
+
+a.btn4 {
+    text-transform: capitalize;
+    padding: 10px 30px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-align: center;
+    background-color: #e2a239;
+    font-family: 'Roboto';
+    color: #2b383e;
+    font-weight: 500;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.btn4:hover {
+    transform: scale(1.02);
+}
+
+.btn5 {
+    border-radius: 7px;
+    color: #fff;
+    padding: 12px 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #2B383E;
+    font-family: 'Roboto';
+    text-transform: capitalize;
+    font-size: 13px;
+    transition: .5s;
+}
+
+.btn5:hover {
+    transform: scale(1.02);
+}
+
+/* only container responsive  */
+@media (min-width: 576px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 540px !important;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 720px !important;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 960px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px !important;
+    }
+}
+
+@media (min-width: 1299px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1240px !important;
+    }
+}
+
+@media (min-width: 1399px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1250px !important;
+    }
+}
+
+/* only container responsive  */
