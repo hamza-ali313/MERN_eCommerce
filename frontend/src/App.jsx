@@ -3,9 +3,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Home from "./pages/Home/Home";
-
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,10 +19,11 @@ function App() {
 
   return (
     <>
-      {showHeader && <Header />}
+      {/* {showHeader && <Header />} */}
       <Routes>
-        {<Route path="/" element={<Home />} />
-        /* <Route path="spa" element={<Spa />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/adminpanel" element={<AdminPanel />} />
+         {/* <Route path="spa" element={<Spa />} />
         <Route path="studio" element={<Studio />} />
         <Route path="cafe" element={<Cafe />} />
         <Route path="about" element={<About />} />

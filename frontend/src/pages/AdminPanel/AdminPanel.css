@@ -1,0 +1,76 @@
+
+.admin-tabs {
+    min-height: 100vh;
+    background: #e2a239;
+    position: fixed;
+    width: 15%;
+    padding: 0 10px;
+}
+
+
+.admin-tabs .nav-link {
+  color: #fff;
+  font-weight: bold;
+}
+    
+.admin-tabs .nav-link.active {
+  background-color: #e2a239;
+  color: #fff;
+}
+
+.admin-tabs .nav-link:hover {
+  color: #fff;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table thead th {
+  background-color: #e2a239;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+  background-color: #cce5ff;
+}
+
+
+
+/* UploadProductForm.css start*/
+
+.upload-form {
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.upload-form h2 {
+  margin-bottom: 20px;
+}
+
+.upload-form Form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form Form label {
+  font-weight: bold;
+}
+
+.upload-form Form input,
+.upload-form Form textarea,
+.upload-form Form select {
+  margin-bottom: 15px;
+}
+
+.upload-form Form button {
+  margin-top: 20px;
+}
+
+/* UploadProductForm.css end*/
