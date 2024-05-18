@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-
+import axios from "axios";
 const ProductUploadForm = () => {
   const [formData, setFormData] = useState({
     title: "",
@@ -23,10 +23,13 @@ const ProductUploadForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    const response = await axios.post(`${API_URL}create`, product, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
     // Reset form data after submission
     setFormData({
       title: "",

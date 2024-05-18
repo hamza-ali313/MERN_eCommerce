@@ -2,6 +2,8 @@ import { Col, Tab, Nav, Row, Container, Table } from "react-bootstrap";
 import "./AdminPanel.css";
 import ProductUploadForm from "../../components/ProductUploadForm";
 
+
+
 function AdminPanel() {
   return (
     <section className="admin-pg">
