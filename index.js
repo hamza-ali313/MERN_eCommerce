@@ -10,6 +10,8 @@ import * as url from 'url';
 
 import productRoutes from "./routes/productRoutes/index.js"
 
+
+app.use('/uploads', express.static('uploads')); // To serve static files
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());

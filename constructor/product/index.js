@@ -1,33 +1,44 @@
 import express from "express";
 import Product from "../../models/Product.js"; // Assuming Product model is imported from a file
-
+import upload from '../../upload.js';
 const app = express();
 app.use(express.json()); // Required to parse JSON bodies
 
 // Create a new product
-export const createProduct = async (req, res) => {
-  try {
-    const newProduct = new Product({
-      title: req.body.title,
-      description: req.body.description,
-      price: req.body.price,
-      discountPercentage: req.body.discountPercentage,
-      rating: req.body.rating,
-      stock: req.body.stock,
-      brand: req.body.brand,
-      category: req.body.category,
-      thumbnail: req.body.thumbnail,
-      images: req.body.images,
-    });
+export const createProduct = (req, res) => {
+  upload(req, res, async (err) => {
+    if (err) {
+      return res.status(400).json({ msg: err });
+    }
 
-    await newProduct.save(); // Use save() method to save the new product
-    res.send("Product saved to the database!");
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Error saving product to the database");
-  }
+    try {
+      const { title, description, price, discountPercentage, rating, stock, brand, category } = req.body;
+
+      // Check if files are uploaded
+      const thumbnail = req.files['thumbnail'] ? req.files['thumbnail'][0].path : '';
+      const images = req.files['images'] ? req.files['images'].map(file => file.path) : [];
+
+      const newProduct = new Product({
+        title,
+        description,
+        price,
+        discountPercentage,
+        rating,
+        stock,
+        brand,
+        category,
+        thumbnail,
+        images
+      });
+
+      await newProduct.save();
+      res.send("Product saved to the database!");
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Error saving product to the database");
+    }
+  });
 };
-
 // Get all products
 export const getProducts = async (req, res) => {
   try {

@@ -23,7 +23,7 @@ const ProductUploadForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { ``
     e.preventDefault();
     const response = await axios.post(`${API_URL}create`, product, {
       headers: {
