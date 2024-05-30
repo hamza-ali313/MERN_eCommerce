@@ -42,18 +42,17 @@ a {
 }
 
 h1 {
-  font-size: 55px !important;
-  color: #e2a239 !important;
-  font-family: "Michelia";
-  text-transform: uppercase;
+  font-size: 62px !important;
+  color: #000 !important;
+  text-transform: capitalize;
   letter-spacing: 12px;
-  font-weight: 500 !important;
+  font-weight: 900 !important;
+  font-family: "DunbarLow-Light";
 }
 
 h2 {
   font-size: 30px !important;
   color: #e2a239 !important;
-  font-family: "Copperplate-Gothic";
   text-transform: capitalize;
   letter-spacing: -1px;
 }
@@ -61,14 +60,12 @@ h2 {
 h2 span {
   font-size: 19px !important;
   color: #e2a239 !important;
-  font-family: "Copperplate-Gothic";
   text-transform: capitalize;
 }
 
 h6 {
   font-size: 15px !important;
   color: #e2a239 !important;
-  font-family: "Copperplate-Gothic-Light";
   text-transform: uppercase;
   font-weight: 500 !important;
   letter-spacing: 0px;
@@ -76,7 +73,6 @@ h6 {
 
 h4 {
   text-transform: capitalize;
-  font-family: "LeMondeLivre-SemiBold";
   font-size: 40px !important;
 }
 
@@ -85,7 +81,6 @@ a.btn8 {
   border: 3px solid orange;
   padding: 5px 17px;
   border-radius: 6px;
-  font-family: "Copperplate-Gothic";
   text-transform: capitalize;
   font-size: 19px;
   font-weight: 500;
@@ -101,14 +96,13 @@ a.btn8 {
 .btn1 {
   text-transform: capitalize;
   color: #e2a239;
-  font-size: 30px;
-  font-weight: 500;
-  font-family: "Copperplate-Gothic";
+  font-size: 20px;
+  font-family: "DunbarLow-Light";
+  font-weight: 900;
   position: relative;
   background: #2b383e;
   border: 2px solid;
-  padding: 0px 33px;
-  text-decoration: none;
+  padding: 4px 33px;
 }
 
 .btn1:before {
@@ -150,7 +144,6 @@ a.btn2 {
   color: #e2a239;
   font-size: 26px;
   font-weight: 500;
-  font-family: "Copperplate-Gothic";
   position: relative;
   background: #2b383e;
   border: 2px solid;
@@ -222,7 +215,68 @@ a.btn4 {
 
 /* product item css end */
 
+/* banner carousel css start */
+.carousel-item {
+  height: 500px;
+  background: #fffc;
+}
+.carousel-caption {
+  top: 90px;
+  bottom: unset !important;
+  text-align: left !important;
+}
+header .navbar-brand {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Michelia";
+}
+.carousel-caption img {
+  width: 350px;
+  object-fit: contain;
+  height: 300px;
+}
 
+/* banner carousel css end */
+
+/* product item css start */
+.prod-item img {
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+section.product-sec {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.prod-item {
+  text-align: center;
+  padding: 0 0 50px 0;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin: 0 0 40px 0;
+  border: 2px solid #e2a239;
+}
+.prod-item h2 {
+  font-family: "DunbarLow-Light";
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.prod-item h3 {
+  font-family: "DunbarLow-Light";
+  font-weight: 600;
+}
+/* product item css end */
+
+/* section.home-cat-sec css start */
+/* section.home-cat-sec .row {
+  gap: 10px !important;
+} */
+
+/* section.home-cat-sec css end */
 
 /* only container responsive  */
 @media (min-width: 576px) {

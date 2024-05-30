@@ -11,22 +11,19 @@ const Footer = () => {
               <div className="row align-items-start">
                 <div className="col-12 col-lg-3 col-md-6 col-sm-6">
                   <div className="foot-side">
-                    <h5>COMPANY LINKS</h5>
+                    <h5> LINKS</h5>
                     <ul>
                       <li>
+                        <a >Home</a>
+                      </li>
+                      <li>
                         <a >About Us</a>
-                      </li>
-                      <li>
-                        <a >Membership</a>
-                      </li>
-                      <li>
-                        <a >Help Center</a>
                       </li>
                       <li>
                         <a >Policy &amp; Privacy</a>
                       </li>
                       <li>
-                        <a >Contact</a>
+                        <a >Contact Us</a>
                       </li>
                     </ul>
                   </div>
@@ -63,16 +60,16 @@ const Footer = () => {
                     <h5>CATEGORIES</h5>
                     <ul>
                       <li>
-                        <a >menu</a>
+                        <a >Hardware</a>
                       </li>
                       <li>
                         <a  className="cate-food">
-                          food
+                          Elctrical
                         </a>
                       </li>
                       <li>
                         <a  className="cate-drink">
-                          drinks
+                          Decor
                         </a>
                       </li>
                     </ul>

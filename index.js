@@ -9,6 +9,7 @@ import path from "path"
 import * as url from 'url';
 
 import productRoutes from "./routes/productRoutes/index.js"
+import categoryRoutes from "./routes/productcategoriesRoutes/index.js"
 
 
 app.use('/uploads', express.static('uploads')); // To serve static files
@@ -18,6 +19,7 @@ app.use(cookieParser());
 
 // Routes
 app.use('/api/products/',productRoutes)
+app.use('/api/category/',categoryRoutes)
 
 mongoose.connect(process.env.MONGO)
 .then(() => console.log("Connected to MongoDB..."))

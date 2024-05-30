@@ -1,6 +1,6 @@
 import { Col, Tab, Nav, Row, Container, Table } from "react-bootstrap";
 import "./AdminPanel.css";
-import ProductUploadForm from "../../components/ProductUploadForm";
+import ProductUploadForm from "../../components/ProductUploadForm/ProductUploadForm";
 
 
 
