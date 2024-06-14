@@ -1,5 +1,5 @@
 import express from "express";
-import Product from "../../models/Product.js"; // Assuming Product model is imported from a file
+import { Product, Book, Shoe, Cloths, Electronics } from '../../models/Product.js';
 import upload from '../../upload.js';
 const app = express();
 app.use(express.json()); // Required to parse JSON bodies
@@ -12,24 +12,57 @@ export const createProduct = (req, res) => {
     }
 
     try {
-      const { title, description, price, discountPercentage, rating, stock, brand, category } = req.body;
+      const { title, description, price, discountPercentage, rating, stock, brand, category, author, size, warranty } = req.body;
 
       // Check if files are uploaded
       const thumbnail = req.files['thumbnail'] ? req.files['thumbnail'][0].path : '';
       const images = req.files['images'] ? req.files['images'].map(file => file.path) : [];
 
-      const newProduct = new Product({
+      // Create the base product data
+      const baseProductData = {
         title,
         description,
         price,
         discountPercentage,
         rating,
         stock,
-        brand,
         category,
         thumbnail,
         images
-      });
+      };
+
+      let newProduct;
+
+      // Instantiate the correct model based on the category
+      switch (category.toLowerCase()) {
+        case 'books':
+          newProduct = new Book({
+            ...baseProductData,
+            author
+          });
+          break;
+        case 'cloths':
+          newProduct = new Cloths({
+            ...baseProductData,
+            size
+          });
+          break;
+        case 'shoe':
+          newProduct = new Shoe({
+            ...baseProductData,
+            brand
+          });
+          break;
+        case 'electronics':
+          newProduct = new Electronics({
+            ...baseProductData,
+            brand,
+            warranty
+          });
+          break;
+        default:
+          newProduct = new Product(baseProductData);
+      }
 
       await newProduct.save();
       res.send("Product saved to the database!");
@@ -49,6 +82,19 @@ export const getProducts = async (req, res) => {
     res.status(500).send("Error fetching products from the database");
   }
 };
+
+// Get products by category
+export const getProductsByCategory = async (req, res) => {
+  try {
+    const category = req.params.category;
+    const products = await Product.find({ category });
+    res.json(products);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
+  }
+};
+
 
 // Update a product based on the id
 export const updateProduct = async (req, res) => {

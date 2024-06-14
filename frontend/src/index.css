@@ -27,14 +27,23 @@
   font-family: "Copperplate-Gothic-Light";
   src: url(./assets/fonts/Copperplate-Gothic-Light-Regular.ttf);
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 ul li {
   list-style: none;
 }
 
 body {
   overflow-x: hidden;
-  background-color: #2b383e !important;
 }
 
 a {
@@ -340,3 +349,17 @@ section.product-sec {
 }
 
 /* only container responsive  */
+
+
+
+/* admin Register pg css start */
+/* .registerpg .MuiBox-root {
+  background: #fff;
+  padding: 10px 10px;
+  border-radius: 13px;
+}
+
+.registerpg h1 {
+  font-size: 40px !important;
+} */
+/* admin Register pg css end */

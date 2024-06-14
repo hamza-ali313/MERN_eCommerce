@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Container, Col } from "react-bootstrap";
 import ProductList from "../../components/ProductList/ProductList";
+import { useParams } from "react-router-dom";
+import { BASE_URL } from "../../Helper/APIConfig";
 
 
 const ProductCategoryPage = () => {
+  const { category } = useParams();
   const [productList, setProductList] = useState([]);
   useEffect(() => {
     getProduct();
@@ -13,10 +16,10 @@ const ProductCategoryPage = () => {
   const getProduct = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/products/read"
+        `${BASE_URL}api/products/read/${category}`
       );
       setProductList(response.data);
-      console.log(response.data);
+      console.log(response.data,"data");
     } catch (e) {
       console.log(e);
     }

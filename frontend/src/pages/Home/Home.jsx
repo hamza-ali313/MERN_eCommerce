@@ -6,7 +6,26 @@ import screw from "../../assets/Images/screw.png";
 import Footer from "../../components/Footer/Footer";
 import Prodcategory from "../../components/prodcategory/Prodcategory";
 import bannerData from "../../Helper/Homepagecat";
+import {BASE_URL} from '../../Helper/APIConfig.js'
+
 const HomePage = () => {
+  const [categoryList, setcategoryList] = useState([]);
+  useEffect(() => {
+    getcategory();
+  }, []);
+
+  const getcategory = async () => {
+    try {
+      const response = await axios.get(
+        `${BASE_URL}api/category/read`
+      );
+      setcategoryList(response.data);
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <>
       {/* banner sec start */}
@@ -52,9 +71,9 @@ const HomePage = () => {
       <section className="py-5 ">
         <Container>
           <Row>
-            {bannerData.map((data) => (
+            {categoryList.map((data) => (
               <Col lg={4}>
-                <Prodcategory name={data.name} img={data.img} />
+                <Prodcategory name={data.name} img={data.img} category={data.category}/>
               </Col>
             ))}
           </Row>
