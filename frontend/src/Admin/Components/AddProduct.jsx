@@ -21,7 +21,7 @@ import axios from "axios";
 import { BASE_URL } from "../../Helper/APIConfig";
 import { MdOutlineCancel, MdProductionQuantityLimits } from "react-icons/md";
 
-const AddProduct = ({ getProductInfo, data }) => {
+const AddProduct = () => {
   const [categoryList, setcategoryList] = useState([]);
   const [size, setSize] = useState([
     "small",
